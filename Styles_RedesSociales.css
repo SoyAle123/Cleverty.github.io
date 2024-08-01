@@ -1,0 +1,195 @@
+/* Estilos básicos */
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+header {
+    background-image: url(../imagenes/minimalista2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: none;
+}
+
+/* Estilos del menú móvil */
+header .mobile-menu-toggle {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+header nav.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 315px;
+    height: 100%;
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+header nav.mobile-menu.open {
+    transform: translateX(0);
+}
+
+header nav.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Ajuste para mostrar los botones uno debajo del otro */
+}
+
+header nav.mobile-menu ul li {
+    margin: 0.7rem 0;
+    padding-left: 1rem;
+}
+
+header nav.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: none;
+}
+
+header .close-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.9rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.1rem;
+    cursor: pointer;
+}
+
+.redes-content {
+    padding: 2rem; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #ff6600; /* Color de fondo */
+    position: fixed; /* Usar posición fija para centrarlo en la pantalla */
+    top: 58%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para el centrado exacto */
+    z-index: 1; /* Asegura que el cuadro esté sobre otros elementos */
+    width: 300px; /* Ancho del cuadro */
+    height: auto; /* Ajustar altura automáticamente */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Aumenta el espacio entre los botones */
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.2rem; /* Tamaño de texto */
+    padding: 0.5rem; /* Espacio interno de enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    width: 100%; /* Ajustar al ancho del contenedor */
+    text-align: center; /* Centrar texto dentro del botón */
+}
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Cambia el fondo al pasar el cursor */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    header {
+        background: url(../imagenes/minimalista.gif);
+        color: #fff;
+        text-align: center;
+    }
+    header .mobile-menu-toggle {
+        display: block;
+    }
+
+    header nav.desktop-menu {
+        display: none;
+    }
+
+    header nav.mobile-menu {
+        display: flex;
+        z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+    }
+
+    header nav.mobile-menu.open {
+        transform: translateX(0); /* Mostrar menú */
+    }
+
+    header .close-menu-toggle {
+        display: block;
+    }
+
+    .redes-content {
+        width: 250px; /* Ancho ajustado para alinear con el menú */
+        height: auto; /* Altura ajustada automáticamente */
+        padding: 2rem; /* Espacio interno */
+        border-radius: 15px; /* Bordes redondeados */
+        background-color: #ff6600; /* Color de fondo */
+        position: fixed; /* Usar posición fija para centrarlo en la pantalla */
+        top: 50%; /* Centrar verticalmente */
+        left: 50%; /* Centrar horizontalmente */
+        transform: translate(-50%, -50%); /* Ajuste para el centrado exacto */
+        z-index: 1; /* Asegura que el cuadro esté sobre otros elementos */
+    }
+}

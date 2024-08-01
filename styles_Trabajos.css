@@ -1,0 +1,212 @@
+/* styles_Trabajos.css */
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 0.9rem;
+    margin-bottom: 3rem; /* Aumentar el margen inferior del contenido principal */
+    background-color: #252525;
+}
+
+/* Estilos del encabezado */
+header {
+    background-image: url(../imagenes/minimalista2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Espacio debajo del logo */
+}
+
+.catalogo-seccion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.catalogo-seccion h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.catalogo-seccion p {
+    font-size: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    position: relative;
+}
+
+/* Menú de escritorio */
+nav ul.botones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centrar los botones en el menú de escritorio */
+}
+
+nav ul.botones li {
+    margin: 0 1rem;
+}
+
+nav ul.botones li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Menú desplegable */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-menu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 1rem 0;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-weight: bold;
+}
+
+header .close-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Ocultar los botones de escritorio en móviles */
+    nav ul.botones {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+    header {
+        background: url(../imagenes/minimalista.gif);
+        color: #fff;
+        text-align: center;
+    }
+    header .mobile-menu-toggle {
+        display: block;
+    }
+
+    header nav.desktop-menu {
+        display: none;
+    }
+
+    header nav.mobile-menu {
+        display: flex;
+    }
+
+    header .close-menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Mostrar los botones de escritorio en pantallas grandes */
+    nav ul.botones {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    header .mobile-menu-toggle {
+        display: none;
+    }
+
+    header nav.desktop-menu {
+        display: flex;
+    }
+
+    header nav.mobile-menu {
+        display: none;
+    }
+}

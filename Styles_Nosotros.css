@@ -1,0 +1,199 @@
+/* styles_nosotros.css */
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Para evitar el desplazamiento lateral */
+    color: white;
+}
+
+/* Estilos del encabezado */
+header {
+    background-image: url(../imagenes/minimalista2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    font-size: 1.5rem;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Menú desplegable */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.botones {
+    font-weight: none;
+}
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-menu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 1rem 0;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .close-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 1rem;
+    margin-bottom: 3rem; /* Aumentar el margen inferior del contenido principal */
+    background-color: #252525;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.nosotros-content,
+.equipo-content {
+    background-color: #ff6600;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 4px solid #ff6600;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.valores {
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0;
+}
+
+.equipo-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.equipo-miembro {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #252525;
+    background-color: #252525;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.personas{
+    width: 150px; /* Ajusta el tamaño de la imagen aquí */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Opcional: para hacer la imagen circular */
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: block;
+    }
+    header {
+        background: url(../imagenes/minimalista.gif);
+        color: #fff;
+        text-align: center;
+    }
+
+    header .close-menu-toggle {
+        display: block;
+    }
+    .nav-menu .logo img {
+        display: block;
+        margin: 2rem auto; /* Centra la imagen y añade espacio alrededor */
+        max-width: 100%; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-top: 37rem
+    }
+}

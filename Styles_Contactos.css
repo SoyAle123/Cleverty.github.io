@@ -1,0 +1,270 @@
+/* Styles_Contactos.css */
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ff6600;
+}
+
+/* Estilos del encabezado */
+header {
+    background-image: url(../imagenes/minimalista2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.contactos-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #252525;
+    border-radius: 15px;
+    background: #252525;
+    text-align: center; /* Centrar el texto y los elementos dentro */
+}
+header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos del menú de escritorio */
+header nav.desktop-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Espacio debajo del logo */
+}
+
+header nav.desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav.desktop-menu ul li {
+    margin: 0 1rem;
+}
+
+header nav.desktop-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: none;
+}
+
+/* Estilos del botón de menú móvil */
+header .mobile-menu-toggle {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Estilos del menú móvil */
+header nav.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 315px;
+    height: 100%;
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+header nav.mobile-menu.open {
+    transform: translateX(0);
+}
+
+header nav.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav.mobile-menu ul li {
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+header nav.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .close-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 1rem;
+}
+
+
+
+.contactos-content h1 {
+    color: #ffffff;
+}
+label{
+    color: white;
+}
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos del formulario */
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px; /* Limitar el ancho máximo del grupo del formulario */
+    margin-bottom: 1rem;
+    text-align: left; /* Alinear a la izquierda las etiquetas */
+    padding: 0 1rem; /* Añadir un padding para hacer espacio a los lados */
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.form-group button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 7px; /* Ajusta este valor según sea necesario */
+}
+
+.form-group button:hover {
+    background: #555;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        background: url(../imagenes/minimalista.gif);
+        color: #fff;
+        text-align: center;
+    }
+    header .mobile-menu-toggle {
+        display: block;
+    }
+
+    header nav.desktop-menu {
+        display: none;
+    }
+
+    header nav.mobile-menu {
+        display: flex;
+    }
+
+    header .close-menu-toggle {
+        display: block;
+    }
+
+    .contactos-content {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 95%;
+        max-width: 500px;
+    }
+    .form-group button {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 5px;
+        background: #ff6600;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        max-width: 500px;
+        margin-left: 7px; /* Ajusta este valor según sea necesario */
+    }    
+    .form-group {
+        padding: 0 0.5rem; /* Ajustar el padding en móviles */
+    }
+
+    form {
+        width: 96%;
+    }
+
+    .form-group button {
+        max-width: 100%;
+    }
+}
+
+/* Estilos específicos para dispositivos de escritorio */
+@media (min-width: 769px) {
+    header {
+        color: #fff;
+        text-align: center;
+    }
+    header nav.desktop-menu {
+        display: flex;
+    }
+
+    header .mobile-menu-toggle {
+        display: none;
+    }
+
+    header nav.mobile-menu {
+        display: none;
+    }
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}

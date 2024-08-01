@@ -1,0 +1,203 @@
+/* styles.css */
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 1rem;
+    margin-bottom: 3rem; /* Aumentar el margen inferior del contenido principal */
+    background-color: #252525;
+}
+/* Estilos del encabezado */
+header {
+    background-image: url(../imagenes/minimalista2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.botones{
+    font-weight: none;
+}
+.catalogo-seccion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.catalogo-seccion h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.catalogo-seccion p {
+    font-size: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Menú desplegable */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.trabajos{
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6.6rem;
+    border-radius: 15px;
+    text-align: center;
+}
+.cleverty{
+    color: #ff6600;
+    font-size: 2rem;
+    text-decoration: underline #ff6600;
+}
+.text{
+    color: #000000;
+    font-weight: bold;
+}
+.nav-menu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 1rem 0;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del contenido principal */
+
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-weight: bold;
+}
+header .close-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+    header {
+        background: url(../imagenes/minimalista.gif);
+        color: #fff;
+        text-align: center;
+    }
+    header .mobile-menu-toggle {
+        display: block;
+    }
+    
+    header nav.desktop-menu {
+        display: none;
+    }
+
+    header nav.mobile-menu {
+        display: flex;
+    }
+
+    header .close-menu-toggle {
+        display: block;
+    }
+    img .cata {
+        height: 110px;
+        width: 0px;
+        }
+}
